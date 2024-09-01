@@ -1,0 +1,65 @@
+[gd_scene load_steps=15 format=3 uid="uid://bfc8i0r0tnklr"]
+
+[ext_resource type="Script" path="res://Scripts/camera_3d.gd" id="1_hal86"]
+[ext_resource type="Texture2D" uid="uid://bd64ubn0h400a" path="res://Assets/1601.m10.i311.n029.S.c10.164511620 Seamless green grass vector pattern.jpg" id="1_u1qdq"]
+[ext_resource type="ArrayMesh" uid="uid://bdnv1gurfw4d3" path="res://Assets/terrain.obj" id="1_yaqyg"]
+[ext_resource type="ArrayMesh" uid="uid://ce6amd5nkw5eh" path="res://Assets/stanford-bunny.obj" id="4_8vp1u"]
+[ext_resource type="ArrayMesh" uid="uid://c7o22ro8h6qmr" path="res://Assets/arvore/Hazelnut.obj" id="5_gv6gm"]
+[ext_resource type="Texture2D" uid="uid://dcnnicw46701o" path="res://Assets/arvore/HazelnutBark.png" id="6_jknk5"]
+[ext_resource type="Texture2D" uid="uid://bxu4tpthghvfe" path="res://Assets/arvore/HazelnutLeaves.png" id="7_va00b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8j30n"]
+albedo_texture = ExtResource("1_u1qdq")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0lxya"]
+sky_top_color = Color(1.73271e-06, 0.475614, 0.72128, 1)
+sky_horizon_color = Color(1, 1, 1, 1)
+ground_energy_multiplier = 4.5
+
+[sub_resource type="Sky" id="Sky_aetc7"]
+sky_material = SubResource("ProceduralSkyMaterial_0lxya")
+
+[sub_resource type="Environment" id="Environment_tsauh"]
+background_mode = 2
+sky = SubResource("Sky_aetc7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_18pb0"]
+albedo_texture = ExtResource("6_jknk5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdcvk"]
+transparency = 1
+albedo_texture = ExtResource("7_va00b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvjue"]
+transparency = 4
+albedo_texture = ExtResource("7_va00b")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, -0.866025, 0, 30, -57)
+fov = 70.0
+script = ExtResource("1_hal86")
+
+[node name="Terreno" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_8j30n")
+mesh = ExtResource("1_yaqyg")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, -1.74282e-07, -1.40224e-08, 0, -0.0801988, 0.996779, -1.74846e-07, -0.996779, -0.0801988, 0, 3, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_tsauh")
+
+[node name="Coelho" type="MeshInstance3D" parent="."]
+transform = Transform3D(-149, 0, -1.3026e-05, 0, 149, 0, 1.3026e-05, 0, -149, -64, 0, 34)
+visible = false
+mesh = ExtResource("4_8vp1u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.765, 0, 0, 0, 1.765, 0, 0, 0, 1.765, -59.7168, 8.54, 52.2835)
+mesh = ExtResource("5_gv6gm")
+surface_material_override/0 = SubResource("StandardMaterial3D_18pb0")
+surface_material_override/1 = SubResource("StandardMaterial3D_kdcvk")
+surface_material_override/2 = SubResource("StandardMaterial3D_dvjue")

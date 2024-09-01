@@ -11,5 +11,23 @@ config_version=5
 [application]
 
 config/name="Godot-Test"
+run/main_scene="res://Scenes/node_3d.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/vsync/vsync_mode=0
+
+[editor]
+
+movie_writer/disable_vsync=true
+movie_writer/fps=300
+
+[filesystem]
+
+import/blender/enabled=false
+
+[rendering]
+
+anti_aliasing/quality/use_taa=true
