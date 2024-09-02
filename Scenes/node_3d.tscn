@@ -59,6 +59,7 @@ mesh = ExtResource("4_8vp1u")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.765, 0, 0, 0, 1.765, 0, 0, 0, 1.765, -59.7168, 8.54, 52.2835)
+visible = false
 mesh = ExtResource("5_gv6gm")
 surface_material_override/0 = SubResource("StandardMaterial3D_18pb0")
 surface_material_override/1 = SubResource("StandardMaterial3D_kdcvk")

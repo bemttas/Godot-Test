@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbhbs0ftn43g6"]
+
+[ext_resource type="Script" path="res://Scenes/collision.gd" id="1_2o0ic"]
+[ext_resource type="PackedScene" uid="uid://b2kp3tcvv0l2c" path="res://Scenes/sphere.tscn" id="2_uecvg"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q7mrf"]
+sky_top_color = Color(0.253584, 0.378186, 0.930009, 1)
+
+[sub_resource type="Sky" id="Sky_28n3u"]
+sky_material = SubResource("ProceduralSkyMaterial_q7mrf")
+
+[sub_resource type="Environment" id="Environment_yr7li"]
+background_mode = 2
+sky = SubResource("Sky_28n3u")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mrey1"]
+lightmap_size_hint = Vector2i(12, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_54aqu"]
+size = Vector3(10, 0, 10)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_2o0ic")
+sphere_scene = ExtResource("2_uecvg")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.947846, 0.318728, 0, -0.318728, 0.947846, 0, 3.01875, 4.47684)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yr7li")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Plano" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_mrey1")
+skeleton = NodePath("../..")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="StaticBody3D/Plano"]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0.346668, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+physics_interpolation_mode = 2
+shape = SubResource("BoxShape3D_54aqu")
