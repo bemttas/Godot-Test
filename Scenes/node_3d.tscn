@@ -10,6 +10,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8j30n"]
 albedo_texture = ExtResource("1_u1qdq")
+metallic_specular = 0.0
 uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0lxya"]

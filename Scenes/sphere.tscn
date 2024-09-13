@@ -15,7 +15,6 @@ physics_material_override = SubResource("PhysicsMaterial_i4gsv")
 angular_velocity = Vector3(0.0872665, 0, 0.0872665)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 shape = SubResource("SphereShape3D_sh4en")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]

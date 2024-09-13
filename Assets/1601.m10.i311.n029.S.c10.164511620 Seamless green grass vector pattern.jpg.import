@@ -3,27 +3,26 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bd64ubn0h400a"
-path.s3tc="res://.godot/imported/1601.m10.i311.n029.S.c10.164511620 Seamless green grass vector pattern.jpg-d9da5faca7d7aa7e952b2ed65ce46c7b.s3tc.ctex"
+path="res://.godot/imported/1601.m10.i311.n029.S.c10.164511620 Seamless green grass vector pattern.jpg-d9da5faca7d7aa7e952b2ed65ce46c7b.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/1601.m10.i311.n029.S.c10.164511620 Seamless green grass vector pattern.jpg"
-dest_files=["res://.godot/imported/1601.m10.i311.n029.S.c10.164511620 Seamless green grass vector pattern.jpg-d9da5faca7d7aa7e952b2ed65ce46c7b.s3tc.ctex"]
+dest_files=["res://.godot/imported/1601.m10.i311.n029.S.c10.164511620 Seamless green grass vector pattern.jpg-d9da5faca7d7aa7e952b2ed65ce46c7b.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=false
-mipmaps/limit=-1
+mipmaps/limit=0
 roughness/mode=0
 roughness/src_normal=""
 process/fix_alpha_border=true
