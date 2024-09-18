@@ -14,9 +14,9 @@ data = PackedVector3Array(0, 0.0761, -0.3827, 0, 0.0431, -0.2903, 0.0375, 0.0761
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_2o0ic")
 sphere_scene = ExtResource("2_uecvg")
-sphere_count = 2000
-sphere_spawn_x = 5.0
-sphere_spawn_z = 5.0
+sphere_spawn_x = 10.0
+sphere_spawn_z = 10.0
+height = 30.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0.766044, -0.642788, 0, 0.642788, 0.766044, 1, 3.34848e-08, -2.80972e-08, -30, 50, 0)
@@ -25,11 +25,8 @@ transform = Transform3D(-4.37114e-08, 0.766044, -0.642788, 0, 0.642788, 0.766044
 environment = SubResource("Environment_16fcm")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 13.9786, 0)
-light_energy = 0.879
-light_indirect_energy = 10.826
-light_volumetric_fog_energy = 0.0
-light_angular_distance = 90.0
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 37.7623, 0)
+light_energy = 1.8
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)

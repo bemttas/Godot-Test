@@ -2,19 +2,21 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i4gsv"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_sh4en"]
-
 [sub_resource type="SphereMesh" id="SphereMesh_yrsch"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_y5c47"]
+
 [node name="Node3D" type="Node3D"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_i4gsv")
 angular_velocity = Vector3(0.0872665, 0, 0.0872665)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
-shape = SubResource("SphereShape3D_sh4en")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+cast_shadow = 0
 mesh = SubResource("SphereMesh_yrsch")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+shape = SubResource("SphereShape3D_y5c47")

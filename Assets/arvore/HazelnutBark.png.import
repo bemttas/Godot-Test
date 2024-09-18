@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcnnicw46701o"
 path.s3tc="res://.godot/imported/HazelnutBark.png-ba33a5ee7d957758575c2f80a256a54d.s3tc.ctex"
+path.etc2="res://.godot/imported/HazelnutBark.png-ba33a5ee7d957758575c2f80a256a54d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/arvore/HazelnutBark.png"
-dest_files=["res://.godot/imported/HazelnutBark.png-ba33a5ee7d957758575c2f80a256a54d.s3tc.ctex"]
+dest_files=["res://.godot/imported/HazelnutBark.png-ba33a5ee7d957758575c2f80a256a54d.s3tc.ctex", "res://.godot/imported/HazelnutBark.png-ba33a5ee7d957758575c2f80a256a54d.etc2.ctex"]
 
 [params]
 
